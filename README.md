@@ -1,15 +1,3 @@
-# Commercial Trading Simulation
-
-**Module Title:** Object Orientation with Design Patterns  
-**Assignment Type:** Project  
-**Project Title:** Commercial Trading Simulation  
-**Project Date:** April 2021  
-**Assignment Compiler:** Amilcar Aponte (amilcar@cct.ie)  
-**Weighting:** 35%  
-**Due Date:** Saturday, 15th May 2021  
-**Late Submission Penalty:** 10% flat penalty for submissions until Friday, 21st May 2021 @ 23:59  
-**Submission Method:** Moodle uploader (Email submissions will not be accepted)
-
 ## Introduction
 
 This project is designed to simulate the sales of products between three companies using Object-Oriented Design Patterns. The simulation involves:
