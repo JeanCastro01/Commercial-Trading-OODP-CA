@@ -1,41 +1,87 @@
-# CommercialTrading_OODP
+# Commercial Trading Simulation
 
-Object Orientation with Design Patterns
- Module Title: Assignment Type: Project Title:
-Project Date: Assignment Compiler: Weighting:
-Due Date:
-Method of Submission:
-Assignment Introduction
-Object Orientation with Design Patterns Practical CA
-Commercial Trading
-April 2021
-Amilcar Aponte (amilcar@cct.ie)
-35%
-Saturday, 15th May 2021
-Late submissions will be accepted until Friday, 21st May 2021 @ 23:59 with a flat penalty of 10% of the grade awarded. Moodle uploader link
-Email submission will not be accepted
-  You have been asked to design and implement a program that simulates sales of products between two companies.
-• BIG-A produces : A
-• BIG-B produces : B
-• BIG-C produces: C
-Each of the companies produces one product and must trade with the other two to buy products. Company BIG-A is a supplier of A's and buys B's and C’s, while company BIG-B is a supplier of B's and buys A's and C’s, and company BIG-C is a supplier of C’s and buys A’s and B’s.
-Each company have 50 depots, each containing a varying number of native product and external product. The minimum stock of native product for each depot is 15, and the maximum stock is 50. The same way, each depot can hold a minimum of 3 and a maximum of 40 of the external product.
-Specific requirements
-You are required to implement the program specification. In order to do this you must implement/customise at least THREE Object Oriented Design Patterns. You also must use best practice in Object Oriented software development and demonstrate knowledge of Object Oriented programming principles.
-When the program start running the simulation should start, adhering to the following rules:
-• Companies and depots most be created in memory with random values of allowance, stock
-(native and external produce) and prices (products and delivery).
-• Each depot must have its own product price and delivery price. These should be random
-numbers between 1 and 10
-• Every depot has a random initial cash allowance between 50 and 100
-• Each depot from one company should try to trade with all depots from the other companies
-• A depot cannot go below its minimum stock of its native product
-• A depot cannot store above its maximum stock of its native product
-• A depot cannot go below its minimum stock of its purchase products
-• A depot cannot store above its maximum stock of its purchase products
-Once the simulation is complete the user should be presented with a menu that allows them to see detailed information about the whole trading simulation:
-• See all transactions
-• See all transactions for a particular company
-• For a given company, detailed information about each of the depots:
-o Ownproductstock
-o Foreignproductsstock o Cashbalance
+**Module Title:** Object Orientation with Design Patterns  
+**Assignment Type:** Project  
+**Project Title:** Commercial Trading Simulation  
+**Project Date:** April 2021  
+**Assignment Compiler:** Amilcar Aponte (amilcar@cct.ie)  
+**Weighting:** 35%  
+**Due Date:** Saturday, 15th May 2021  
+**Late Submission Penalty:** 10% flat penalty for submissions until Friday, 21st May 2021 @ 23:59  
+**Submission Method:** Moodle uploader (Email submissions will not be accepted)
+
+## Introduction
+
+This project is designed to simulate the sales of products between three companies using Object-Oriented Design Patterns. The simulation involves:
+
+- **BIG-A** producing product A
+- **BIG-B** producing product B
+- **BIG-C** producing product C
+
+Each company trades its native product with the other two companies. The simulation manages 50 depots per company, each with varying stock levels of native and external products. The program adheres to best practices in Object-Oriented software development and demonstrates knowledge of Object-Oriented programming principles.
+
+## Specific Requirements
+
+The program implements the following rules and features:
+
+- Random generation of companies and depots with initial allowances, stock levels (native and external), and prices (products and delivery).
+- Depots have product prices and delivery prices between 1 and 10.
+- Depots have an initial cash allowance between 50 and 100.
+- Each depot trades with all depots from other companies.
+- Minimum and maximum stock levels for native and external products are enforced.
+- A detailed menu is presented after the simulation, allowing users to view:
+  - All transactions
+  - Transactions for a particular company
+  - Detailed information about each depot for a given company, including:
+    - Own product stock
+    - Foreign product stock
+    - Cash balance
+
+## Design Patterns Used
+
+- **MVC (Model-View-Controller):** Organizes the program structure with clear separation of concerns.
+  - **Model:** Represents companies, products, and depots.
+  - **View:** Interacts with the user and saves data to a `.txt` document.
+  - **Controller:** Manages all transactions in the system.
+
+- **Abstract Factory:** Used for creating related objects without specifying their concrete classes, facilitating the development of models.
+
+- **Singleton:** Ensures a single method to provide all information when saving data to a `.txt` file.
+
+## Project Structure
+
+- **Mymain:** Main Java project entry point.
+- **abstractFactory:** Implements the Abstract Factory design pattern.
+- **company:** Contains company-related classes.
+- **controller:** Implements the Controller component of the MVC pattern.
+- **depots:** Contains classes related to depot management.
+- **factory:** Supports the creation of various objects.
+- **products:** Manages product-related classes.
+- **saveToFile:** Implements Singleton design pattern for saving data.
+- **view:** Manages user interaction and display.
+
+## Usage
+
+To run the simulation, follow these steps:
+
+1. **Clone the Repository:**
+    ```bash
+    git clone https://github.com/yourusername/commercial-trading-simulation.git
+    cd commercial-trading-simulation
+    ```
+
+2. **Build the Project:**
+    Use your preferred IDE or command line to compile the source code.
+
+3. **Run the Application:**
+    Execute the main class to start the simulation.
+
+4. **View Simulation Results:**
+    Use the provided menu to explore detailed transaction and depot information.
+
+## Example
+
+Here's an example command to start the simulation:
+
+```bash
+java -cp bin Mymain
